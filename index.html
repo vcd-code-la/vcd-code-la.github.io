@@ -1,162 +1,143 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+<head>
   <title>VCDubbing</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/w3.css">
-  <link rel="stylesheet" href="css/w3-theme-black.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </head>
-<style>
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-</style>
 <body id="myPage">
 
 <!-- Navbar -->
-<div class="w3-bar w3-theme-d2 w3-left-align" style="height: 80px; padding: 20px;"></div>
-<div class="w3-top" style="z-index: 1000;">
-  <div class="w3-bar w3-theme-d2 w3-left-align" style="height: 80px; padding: 20px;">
-    <a class="w3-bar-item w3-hide-medium w3-hide-large w3-right w3-theme-d2" href="#myPage" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a class="w3-bar-item " style="height: 60px;"><img src="images/logo.png" style="height: 30px;"></a>
-    <a href="#trabajo" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Work</a>
-    <a href="#ejemplos" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Samples</a>
-    <a href="#contactanos" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact us</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button" title="Notifications">Languages <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-        <a href="https://www.vcdubbing.com/" class="w3-bar-item w3-button">English</a>
-        <a href="https://www.vcdubbing.com/spanish" class="w3-bar-item w3-button">Español</a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(0, 0, 0); padding: 20px;">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Logo" width="175">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto col-md-10">
+        <li class="nav-item" style="padding-right: 15px;">
+          <a class="nav-link text-white" href="#trabajo">Our Services</span></a>
+        </li>
+        <li class="nav-item" style="padding-right: 15px;">
+          <a class="nav-link text-white" href="#ejemplos">Samples</a>
+        </li>
+        <li class="nav-item" style="padding-right: 15x;">
+          <a class="nav-link text-white" href="#contactanos">Contact Us</a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle text-white" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          🇺🇸 English
+        </button>
+        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+          <a class="dropdown-item" href="https://www.vcdubbing.com/">🇺🇸 English</a>
+          <a class="dropdown-item" href="https://www.vcdubbing.com/spanish">🇲🇽 Español</a>
+          <!-- Agregar más opciones de idioma si es necesario -->
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- Navbar en pantallas pequeñas -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-  <a href="#trabajo" class="w3-bar-item w3-button">Our Work</a>
-  <a href="#ejemplos" class="w3-bar-item w3-button">Samples</a>
-  <a href="#contactanos" class="w3-bar-item w3-button">Contact us</a>
-  <a href="https://www.vcdubbing.com/spanish" class="w3-bar-item w3-button">Sitio en Español</a>
-</div>
+</nav>
 
 <!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  <img src="images/banner.png" alt="boat" style="width:100%">
+<div class="text-center" style="background-color:rgb(0, 0, 0);">
+  <img src="images/banner.png" style="max-width: 100%; max-height: 100%;">
 </div>
 
 <!-- Trabajo -->
-<div class="w3-row-padding w3-padding-32 w3-theme-l1" id="trabajo">
-
-  <div class="w3-quarter">
-  <h2>Our Services</h2>
-  <p>VoiceCreative Dubbing Studios. We're a dubbing studio with a group of voices that you will never forget. Get in touch with us, and let's make magic together!</p>
-  </div>
-
-    <div class="w3-center">
-      <div class="w3-quarter">
-        <img src="images/microfono.png" alt="Boss" style="width:45%">
-        <h3>Voice Recording</h3>
-        <p>We have the ability to cast various voice actors, and record your projects into Spanish.</p>
+<div class="container-fluid py-5 text-white" id="trabajo" style="background-color:rgb(43, 43, 43);">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-3 text-left">
+        <h2 style="font-size: 24px;"><p>OUR SERVICES</h2>
+        <p style="font-size: 16px;">VoiceCreative Dubbing Studios. We're a dubbing studio with a group of voices that you will never forget. Get in touch with us, and let's make magic together!</p>
       </div>
-    
-      <div class="w3-quarter">
-        <img src="images/traduccionadaptacion.png" alt="Boss" style="width:45%">
-        <h3>Translation and Localization</h3>
-        <p>Our team of writers can translate and adapt your projects from any language to Latin American Spanish.</p>
-      </div>
-    
-      <div class="w3-quarter">
-        <img src="images/mezcla.png" alt="Boss" style="width:45%">
-        <h3>Audio Mixing</h3>
-        <p>We will carefully mix the project's audio, so that you, and the audience can enjoy with little to no problems.</p>
+      <div class="col-md-9"> <!-- Adjusted column width to 9 -->
+        <div class="row">
+          <div class="col-md-4" style="padding: 10px;"> <!-- Adjusted column width to 4 -->
+            <img src="images/microfono.png" class="img-fluid" style="max-width: 80px;">
+            <h3 style="font-size: 18px;">Voice Recording</h3> <!-- Adjusted font size -->
+            <h6 style="font-size: 14px;">We have the ability to cast various voice actors, and record your projects into Spanish.</h6> <!-- Adjusted font size -->
+          </div>
+          <div class="col-md-4" style="padding: 10px;"> <!-- Adjusted column width to 4 -->
+            <img src="images/traduccionadaptacion.png" class="img-fluid" style="max-width: 80px;">
+            <h3 style="font-size: 18px;">Translation and Localization</h3> <!-- Adjusted font size -->
+            <h6 style="font-size: 14px;">Our team of writers can translate and adapt your projects from any language to Latin American Spanish.</h6> <!-- Adjusted font size -->
+          </div>
+          <div class="col-md-4" style="padding: 10px;"> <!-- Adjusted column width to 4 -->
+            <img src="images/mezcla.png" class="img-fluid" style="max-width: 80px;">
+            <h3 style="font-size: 18px;">Audio Mixing</h3> <!-- Adjusted font size -->
+            <h6 style="font-size: 14px;">We will carefully mix the project's audio, so that you, and the audience can enjoy with little to no problems.</h6> <!-- Adjusted font size -->
+          </div>
+        </div>
       </div>
     </div>
-  
   </div>
+</div>
 
 <!-- Samples -->
-<div class="w3-row-padding w3-center w3-padding-32" id="ejemplos">
-  <h2>SAMPLES</h2>
-  <p>Samples of our work.</p><br>
-  <div class="w3-responsive">
-    <iframe src="https://www.youtube.com/embed/R6z55f0jA8o" style="width:360px; height:240px"></iframe>
+<div class="container-fluid bg-white text-black py-5" id="ejemplos">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center">SAMPLES</h2>
+      <p class="text-center">Samples of our work.</p>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R6z55f0jA8o"></iframe>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- Contact us -->
-<div class="w3-container w3-padding-32 w3-theme-l5" id="contactanos">
-  <div class="w3-row">
-    <div class="w3-col m5">
-    <div class="w3-padding-16"><span class="w3-xlarge w3-border-indigo w3-bottombar">CONTACT US</span></div>
-      <h3>Business e-mail</h3>
-      <p><i class="fa fa-envelope-o w3-text-indigo w3-xlarge"></i>  contact@vcdubbing.com</p>
-    </div>
-    <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="https://formspree.io/f/mleyjejv" method="POST">
-        <div class="w3-section">  
-          <label>E-mail:</label>
-            <input class="w3-input" type="email" name="email" required>
+<div class="container-fluid py-5" id="contactanos" style="background-color:rgb(230, 230, 230);">
+  <div class="container text-left"> <!-- Added "text-center" class to center content -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="py-3">
+          <h2><p>CONTACT US</h2>
+          <hr>
+          <h6>Business E-mail:</h6>
+          <p><img src="images/icon-envelope.png"> contact@vcdubbing.com</p>
         </div>
-        <div class="w3-section">  
-          <label>Name:</label>
-            <input class="w3-input" name="sender-name" required>
-        </div>
-        <div class="w3-section">  
-          <label>Message:</label>
-            <textarea class="w3-input" name="message" required></textarea>
-        </div>
-        <button type="submit"  class="w3-button w3-right w3-theme">Send</button>
-      </form>
+      </div>
+      <div class="col-md-6 text-center">
+        <form action="https://formspree.io/f/mleyjejv" method="POST">
+          <div class="row form-group">
+            <label for="email">E-mail:</label>
+            <input class="form-control" type="email" name="email" required>
+          </div>
+          <div class="row form-group">
+            <label for="sender-name">Name:</label>
+            <input class="form-control" name="sender-name" required>
+          </div>
+          <div class="row form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary float-right">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <div class="w3-center">
-  <h4>Follow us on our social media</h4>
-    <a class="w3-button w3-large w3-indigo" href="https://twitter.com/VCDubbing" title="Twitter"><i class="fa fa-twitter"></i></a>
-    <a class="w3-button w3-large w3-indigo" href="https://www.instagram.com/vcdubbing/" title="Instagram"><i class="fa fa-instagram"></i></a>
-    <a class="w3-button w3-large w3-indigo" href="https://www.youtube.com/@VCDubbing" title="Youtube"><i class="fa fa-youtube"></i></a>
-    <a class="w3-button w3-large w3-indigo" href="https://vimeo.com/vcdubbing" title="Vimeo"><i class="fa fa-vimeo"></i></a>
-  </div>
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-indigo w3-hide-small">Go To Top</span>   
-    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
+<footer class="text-white py-5" style="background-color:rgb(0, 0, 0);">
+  <div class="container text-center">
+    <h4>Follow us on our social media</h4>
+    <a class="btn btn-primary" href="https://twitter.com/VCDubbing" title="Twitter"><img src="images/icon-twitter.png"></a>
+    <a class="btn btn-primary" href="https://www.instagram.com/vcdubbing/" title="Instagram"><img src="images/icon-instagram.png"></a>
+    <a class="btn btn-primary" href="https://www.youtube.com/@VCDubbing" title="Youtube"><img src="images/icon-youtube.png"></a>
+    <a class="btn btn-primary" href="https://vimeo.com/vcdubbing" title="Vimeo"><img src="images/icon-vimeo.png"></a>
   </div>
 </footer>
-
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
-
-</body></html>
