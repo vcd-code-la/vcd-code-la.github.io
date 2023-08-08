@@ -1,1 +1,0 @@
-# fullmetalshin.github.io
